@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodly — Premium Fast Food & Restaurant</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- CINEMATIC INTRO ANIMATSIYA -->
+    <div id="intro-screen">
+        <div class="intro-fire-glow"></div>
+        <div class="intro-content">
+            <div class="intro-logo-box">
+                <svg class="intro-logo-svg" width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" fill="#1C1917" stroke="url(#intro-grad)" stroke-width="3"/>
+                    <path d="M50 16C50 16 26 38 26 60C26 73.25 36.85 84 50 84C63.15 84 74 73.25 74 60C74 38 50 16 50 16Z" fill="url(#intro-grad)"/>
+                    <path d="M50 34C50 34 38 48 38 62C38 69.18 43.37 75 50 75C56.63 75 62 69.18 62 62C62 48 50 34 50 34Z" fill="#FFC247"/>
+                    <path d="M36 65Q50 75 64 65" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="intro-grad" x1="50" y1="16" x2="50" y2="84" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF5A1F"/>
+                            <stop offset="1" stop-color="#E32636"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="intro-title">Foodly<span class="dot-accent">.</span></h1>
+            <p class="intro-subtitle" data-translate="intro_text">Olovli lazzat dunyosi yaratilmoqda...</p>
+            <div class="intro-loader-bar">
+                <div class="intro-loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVBAR -->
+    <header id="header">
+        <div class="container navbar-container">
+            <a href="#" class="brand-logo">
+                <svg width="38" height="38" viewBox="0 0 100 100" fill="none">
+                    <path d="M50 10C50 10 22 35 22 62C22 78.57 34.54 92 50 92C65.46 92 78 78.57 78 62C78 35 50 10 50 10Z" fill="url(#nav-grad)"/>
+                    <path d="M50 32C50 32 36 47 36 63C36 71.28 42.27 78 50 78C57.73 78 64 71.28 64 63C64 47 50 32 50 32Z" fill="#FFC247"/>
+                    <defs>
+                        <linearGradient id="nav-grad" x1="50" y1="10" x2="50" y2="92" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF5A1F"/><stop offset="1" stop-color="#E32636"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Foodly</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#hero" class="active" data-translate="nav_home">Bosh sahifa</a>
+                <a href="#categories" data-translate="nav_cat">Kategoriyalar</a>
+                <a href="#menu" data-translate="nav_menu">To'liq Menyu</a>
+                <a href="#promo" data-translate="nav_promo">Aksiya</a>
+                <a href="#about" data-translate="nav_about">Afzalliklar</a>
+                <a href="#reviews" data-translate="nav_reviews">Fikrlar</a>
+            </nav>
+
+            <div class="nav-controls">
+                <select id="lang-select" class="lang-select" aria-label="Til">
+                    <option value="uz">UZ</option>
+                    <option value="ru">RU</option>
+                    <option value="en">EN</option>
+                </select>
+
+                <button id="theme-btn" class="circle-btn" title="Tun/Kun rejimi">
+                    <span id="theme-icon">☀️</span>
+                </button>
+
+                <button id="cart-open-btn" class="circle-btn cart-trigger" title="Savatcha">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="badge-count" id="cart-badge">0</span>
+                </button>
+
+                <a href="#menu" class="btn btn-primary nav-order-btn" data-translate="btn_order_now">Buyurtma berish</a>
+
+                <button id="mobile-menu-btn" class="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <div class="delivery-pill">
+                    <span>🛵</span>
+                    <span data-translate="hero_pill">30 daqiqada tezkor yetkazib berish</span>
+                </div>
+                <h1 class="hero-heading" data-translate="hero_title">
+                    Ishtahangiz, <br><span>tez yetkaziladi.</span>
+                </h1>
+                <p class="hero-subtext" data-translate="hero_desc">
+                    Yangi tayyorlangan burgerlar, qaynoq pizzalar, lavashlar, shirinliklar va muzdek ichimliklar to'g'ridan-to'g'ri eshigingizgacha.
+                </p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn btn-primary" data-translate="btn_order_now">Buyurtma berish</a>
+                    <a href="#categories" class="btn btn-outline" data-translate="btn_explore">Menyuni ko'rish</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="avatars">
+                        <span class="av">👨🏻</span>
+                        <span class="av">👩🏻</span>
+                        <span class="av">🧔🏻</span>
+                    </div>
+                    <div class="trust-info">
+                        <div class="stars">★★★★★ <strong>4.9</strong></div>
+                        <span data-translate="hero_customers">15,000+ mamnun mijozlar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-circle-bg"></div>
+                <div class="hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Delicious Burger" class="hero-real-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASHHUR KATEGORIYALAR -->
+    <section id="categories" class="section container">
+        <div class="sec-head center">
+            <h2 data-translate="cat_section_title">Mashhur Kategoriyalar</h2>
+            <p data-translate="cat_section_sub">Sevimli taomlaringizni bir zumda toping</p>
+        </div>
+        <div class="cat-cards-grid" id="cat-cards-grid"></div>
+    </section>
+
+    <!-- YANGI MAHSULOTLAR -->
+    <section class="section container">
+        <div class="sec-head flex-between">
+            <div>
+                <h2 data-translate="new_title">Yangi Taomlar</h2>
+                <p data-translate="new_sub">Oshpazlarimizning eng so'nggi yangiliklari</p>
+            </div>
+            <a href="#menu" class="btn-pill" data-translate="view_all">Barchasini ko'rish</a>
+        </div>
+        <div class="products-grid" id="new-arrivals-grid"></div>
+    </section>
+
+    <!-- ENG KO'P SOTILGANLAR -->
+    <section class="section container">
+        <div class="sec-head flex-between">
+            <div>
+                <h2 data-translate="best_title">Eng Ko'p Sotilganlar</h2>
+                <p data-translate="best_sub">Mijozlarimiz eng ko'p tanlaydigan taomlar</p>
+            </div>
+            <a href="#menu" class="btn-pill" data-translate="view_all">Barchasini ko'rish</a>
+        </div>
+        <div class="products-grid" id="best-sellers-grid"></div>
+    </section>
+
+    <!-- MAXSUS TAKLIF BANNERI -->
+    <section id="promo" class="section container">
+        <div class="special-banner">
+            <div class="banner-text">
+                <h2 data-translate="promo_title">Maxsus Taklif!</h2>
+                <p data-translate="promo_desc">Bugun barcha Double Burger va Combo setlarga 30% gacha chegirma!</p>
+                <a href="#menu" class="btn btn-primary" data-translate="btn_order_now">Buyurtma berish</a>
+            </div>
+            <div class="banner-badge-30">
+                <span>30%</span>
+                <small data-translate="off_text">Chegirma</small>
+            </div>
+            <div class="banner-img-wrap">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80" alt="Special Combo">
+            </div>
+        </div>
+    </section>
+
+    <!-- TO'LIQ KATTA MENYU -->
+    <section id="menu" class="section container">
+        <div class="sec-head center">
+            <h2 data-translate="full_menu_title">To'liq Restoran Menyusi</h2>
+            <p data-translate="full_menu_sub">Issiq ovqatlar, burgerlar, pizzalar, shirinliklar va muzdek ichimliklar</p>
+        </div>
+
+        <div class="menu-toolbar">
+            <input type="text" id="menu-search" class="search-input" placeholder="Taom, shirinlik yoki ichimlik qidiring..." data-translate-placeholder="search_ph">
+            <div class="filter-tabs" id="filter-tabs">
+                <button class="tab-btn active" data-cat="all" data-translate="cat_all">Barchasi (24)</button>
+                <button class="tab-btn" data-cat="burgers" data-translate="cat_burgers">Burgerlar</button>
+                <button class="tab-btn" data-cat="lavash" data-translate="cat_lavash">Lavash & Doner</button>
+                <button class="tab-btn" data-cat="pizza" data-translate="cat_pizza">Pizzalar</button>
+                <button class="tab-btn" data-cat="chicken" data-translate="cat_chicken">Tovuq & Snacks</button>
+                <button class="tab-btn" data-cat="sides" data-translate="cat_sides">Garnirlar</button>
+                <button class="tab-btn" data-cat="desserts" data-translate="cat_desserts">Shirinliklar</button>
+                <button class="tab-btn" data-cat="drinks" data-translate="cat_drinks">Ichimliklar</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="full-menu-grid"></div>
+    </section>
+
+    <!-- NIMA UCHUN FOODLY? -->
+    <section id="about" class="section container">
+        <div class="sec-head center">
+            <h2 data-translate="why_title">Nima Uchun Foodly?</h2>
+            <p data-translate="why_sub">Sifat, tezlik va unutilmas ta'm kafolati</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="f-icon">⚡</div>
+                <h3 data-translate="f1_title">Tezkor Yetkazib Berish</h3>
+                <p data-translate="f1_desc">Issiq taomlaringiz 30 daqiqa ichida eshigingizda bo'ladi.</p>
+            </div>
+            <div class="feature-card">
+                <div class="f-icon">🌿</div>
+                <h3 data-translate="f2_title">Yangi Ingredientlar</h3>
+                <p data-translate="f2_desc">Har kuni tongda keltiriladigan 100% halol va tabiiy mahsulotlar.</p>
+            </div>
+            <div class="feature-card">
+                <div class="f-icon">👨‍🍳</div>
+                <h3 data-translate="f3_title">Tajribali Oshpazlar</h3>
+                <p data-translate="f3_desc">Maxsus mualliflik retseptlari asosida tayyorlanadigan taomlar.</p>
+            </div>
+            <div class="feature-card">
+                <div class="f-icon">🎧</div>
+                <h3 data-translate="f4_title">24/7 Qo'llab-quvvatlash</h3>
+                <p data-translate="f4_desc">Kechayu kunduz buyurtmalarni qabul qilish va xizmat ko'rsatish.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MIJOZLAR FIKRI -->
+    <section id="reviews" class="section container">
+        <div class="sec-head center">
+            <h2 data-translate="rev_title">Mijozlarimiz Nima Deydi?</h2>
+            <p data-translate="rev_sub">Minglab mamnun mijozlarning haqiqiy fikrlari</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Cheesy Beef Burger va shokoladli brauni shunchaki mukammal! Yetkazib berish ham juda tez ishladi."</p>
+                <div class="reviewer">
+                    <span class="rev-av">👨🏻</span>
+                    <div><strong>Sardor Alimov</strong><small>Doimiy mijoz</small></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Bolalarim uchun pizza va muzqaymoqli desert buyurtma qildik. Hammasi issiq va chiroyli qadoqlangan holda keldi."</p>
+                <div class="reviewer">
+                    <span class="rev-av">👩🏻</span>
+                    <div><strong>Madina Karimova</strong><small>Toshkent</small></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Shahardagi eng zo'r tandir lavash va mango smuzi shu yerda! Narxlari ham hamyonbop."</p>
+                <div class="reviewer">
+                    <span class="rev-av">🧔🏻</span>
+                    <div><strong>Jasur Toshmatov</strong><small>Food Blogger</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="brand-logo">
+                    <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
+                        <path d="M50 10C50 10 22 35 22 62C22 78.57 34.54 92 50 92C65.46 92 78 78.57 78 62C78 35 50 10 50 10Z" fill="#FF5A1F"/>
+                        <path d="M50 32C50 32 36 47 36 63C36 71.28 42.27 78 50 78C57.73 78 64 71.28 64 63C64 47 50 32 50 32Z" fill="#FFC247"/>
+                    </svg>
+                    <span>Foodly</span>
+                </a>
+                <p class="footer-desc" data-translate="footer_desc">Mazali fast-food, shirinliklar va salqin ichimliklar olami. Tez, sifatli va hamyonbop.</p>
+            </div>
+            <div>
+                <h4 data-translate="footer_menu">Menyu</h4>
+                <a href="#menu">Burgerlar & Lavash</a>
+                <a href="#menu">Pizzalar</a>
+                <a href="#menu">Shirinliklar</a>
+                <a href="#menu">Ichimliklar</a>
+            </div>
+            <div>
+                <h4 data-translate="footer_contact">Aloqa</h4>
+                <p>📞 +998 (71) 205-55-55</p>
+                <p>📍 Toshkent sh., Chilonzor va Yunusobod filiallari</p>
+                <p>🕒 09:00 — 03:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Foodly Fast Food Restaurant. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <!-- SAVATCHA SIDEBAR -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-head">
+            <h3 data-translate="cart_title">Sizning Savatchangiz</h3>
+            <button id="cart-close-btn" class="icon-close">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items-list"></div>
+        <div class="cart-foot">
+            <div class="total-row">
+                <span data-translate="cart_total">Jami summa:</span>
+                <strong id="cart-total-sum">0 so'm</strong>
+            </div>
+            <button id="open-checkout-btn" class="btn btn-primary btn-full" data-translate="btn_checkout">Buyurtmani rasmiylashtirish</button>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- BUYURTMA MODALI -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-box">
+            <button id="modal-close-btn" class="icon-close modal-x">&times;</button>
+            <h2 data-translate="checkout_title">Buyurtma Ma'lumotlari</h2>
+            <form id="checkout-form">
+                <div class="input-group">
+                    <label data-translate="lbl_name">Ismingiz</label>
+                    <input type="text" id="cust-name" required placeholder="Masalan: Azizbek">
+                </div>
+                <div class="input-group">
+                    <label data-translate="lbl_phone">Telefon raqamingiz</label>
+                    <input type="tel" id="cust-phone" required placeholder="+998 90 123 45 67">
+                </div>
+                <div class="input-group">
+                    <label data-translate="lbl_addr">Yetkazib berish manzili</label>
+                    <input type="text" id="cust-addr" required placeholder="Tuman, ko'cha, uy raqami">
+                </div>
+                <div class="input-group">
+                    <label data-translate="lbl_pay">To'lov usuli</label>
+                    <select id="cust-pay">
+                        <option value="Naqd pul">Naqd pul (Kuryerga)</option>
+                        <option value="Karta / Click / Payme">Plastik karta / Click / Payme</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" data-translate="btn_confirm">Buyurtmani tasdiqlash</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MUVAFFAQIYAT MODALI -->
+    <div id="success-modal" class="modal">
+        <div class="modal-box center">
+            <div class="success-badge">🎉</div>
+            <h2 data-translate="ok_title">Buyurtmangiz qabul qilindi!</h2>
+            <p data-translate="ok_sub">Oshpazlarimiz taomlarni tayyorlashni boshlashdi.</p>
+            <div id="receipt-box" class="receipt-box"></div>
+            <button id="ok-close-btn" class="btn btn-primary btn-full" data-translate="btn_done">Ajoyib!</button>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast">Savatchaga qo'shildi!</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
